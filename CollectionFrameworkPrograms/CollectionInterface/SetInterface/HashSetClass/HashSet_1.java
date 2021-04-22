@@ -6,24 +6,27 @@ import java.util.ListIterator;
 
 /**
  * Set - Not Indexed, No Duplicate, Order Not Preserved
- * HashSet - Same as Set
+ * HashSet - Same as Set,  null allowed
+ * 
  * @author Rachit
  *
  */
 public class HashSet_1 {
 
 	public static void main(String args[]) {
-		//Premitive types are not allowed. Wrapper class are used
-		HashSet<String> hs=new HashSet<String>();
+		// Premitive types are not allowed. Wrapper class are used
+		HashSet<String> hs = new HashSet<String>();
 
-		//Order is not preserved
+		// Order is not preserved
 		hs.add("One");
 		hs.add("Two");
 		hs.add("Three");
 		hs.add("Four");
 		hs.add("Five");
 		hs.add("Six");
-		//Duplicate is not allowed
+		//Null value is allowed
+		hs.add(null);
+		// Duplicate is not allowed
 		hs.add("One");
 		hs.add("Two");
 		hs.add("Three");
@@ -32,25 +35,24 @@ public class HashSet_1 {
 		System.out.println("######################   Travesing   ######################");
 		System.out.println("-----------------------------------------------------------");
 
-		//Traversal by Foreach loop
+		// Traversal by Foreach loop
 		System.out.println("Printing [HashSet] Value by For each loop - 1");
-		for(String name : hs) {
+		for (String name : hs) {
 			System.out.println(name);
 		}
 		System.out.println("-----------------------------------------------------------");
 
-		//Traversal by Iterator
+		// Traversal by Iterator
 		System.out.println("Printing [HashSet] Value by Iterator - 2");
-		Iterator<String> itr=hs.iterator();
-		while(itr.hasNext()) {
+		Iterator<String> itr = hs.iterator();
+		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
 		System.out.println("-----------------------------------------------------------");
 
-
-		//Traversal by for each method - Java 8
+		// Traversal by for each method - Java 8
 		System.out.println("Printing [HashSet] Value by Foreach Method - 3");
-		hs.forEach(e->{
+		hs.forEach(e -> {
 			System.out.println(e);
 		});
 		System.out.println("-----------------------------------------------------------");

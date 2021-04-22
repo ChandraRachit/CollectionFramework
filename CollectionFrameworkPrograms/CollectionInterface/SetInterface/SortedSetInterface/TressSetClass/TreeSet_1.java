@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 /**
  * Set - Not Indexed, Order Not Preserved,No Duplicate
- * TreeSet - Sorted 
+ * TreeSet - Sorted ,Null value is not allowed
  * @author Rachit
  *
  */
@@ -22,6 +22,8 @@ public class TreeSet_1 {
 		ts.add("Four");
 		ts.add("Five");
 		ts.add("Six");
+		//Null Value is not allowed
+		//ts.add(null);
 		//Duplicate is not allowed
 		ts.add("One");
 		ts.add("Two");
