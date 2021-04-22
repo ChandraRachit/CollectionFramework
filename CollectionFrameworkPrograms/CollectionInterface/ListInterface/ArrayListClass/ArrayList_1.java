@@ -1,6 +1,12 @@
 package ListInterface.ArrayListClass;
 import java.util.ArrayList;
 
+/**
+ * List - Indexed, Duplicate, order Preserved
+ * ArrayList - Dynamic Array, Non Thread safe
+ * @author Rachit
+ *
+ */
 public class ArrayList_1 {
 	
 	public static void main(String args[]) {
@@ -14,19 +20,27 @@ public class ArrayList_1 {
 		arrayList.add("One");
 		arrayList.add("Two");
 		arrayList.add("Three");
+		
 		System.out.println("Array List in List format ");
 		System.out.println("ArrayList Length = "+arrayList.size());
 		System.out.println(arrayList);
 		System.out.println();
+		
 		arrayList.remove(2);
 		System.out.println("Array List in List format after deleting value from index 2");
 		System.out.println("ArrayList Length = "+arrayList.size());
 		System.out.println(arrayList);
 		System.out.println();
+		
 		arrayList.remove("Six");
 		System.out.println("Array List in List format after deleting value Six");
 		System.out.println("ArrayList Length = "+arrayList.size());
 		System.out.println(arrayList);
+		System.out.println();
+		
+		System.out.println("Verify Element is present One =" +arrayList.contains("One"));
+		System.out.println("Is the ArrayList Empty ="+arrayList.isEmpty());
+		
 	}
 
 }
