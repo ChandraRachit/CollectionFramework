@@ -1,10 +1,11 @@
 package MapInterface.HashMapClass;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
- * Map - Unique Key
- * HashMap - No Order, Null key and null value is allowed
+ * Map - Unique Key HashMap - No Order, Null key and null value is allowed
  * 
  * @author Rachit
  *
@@ -43,6 +44,23 @@ public class HashMap_1 {
 		System.out.println("Printing [HashMap] value for a key - 2");
 		System.out.println("value for Key 3 = " + hm.get(3));
 		System.out.println("-----------------------------------------------------------");
+
+		for (Map.Entry<Integer, String> entry : hm.entrySet()) {
+			System.out.println("Key = " + entry.getKey() + " Value = " + entry.getValue());
+		}
+		System.out.println("-----------------------------------------------------------");
+
+		for (Integer a : hm.keySet()) {
+			System.out.println("Key = " + a + " Value = " + hm.get(a));
+		}
+		System.out.println("-----------------------------------------------------------");
+
+		/*
+		 * Iterator it = hm.keySet().iterator(); while (it.hasNext()) { int key = (int)
+		 * it.next(); System.out.println("Key = " + key + " Value = " + hm.get(key)); }
+		 * System.out.println(
+		 * "-----------------------------------------------------------");
+		 */
 
 	}
 
